@@ -28,14 +28,13 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.post('/', (req, res) => {
     const twiml = new MessagingResponse();
     console.log(req)
-    if (req.body.Body == 'hello') {
-        twiml.message('Hi!');
-    } else if (req.body.Body == 'bye') {
-        twiml.message('Goodbye');
+    if (req.body.Body == 'oi') {
+        twiml.message('Olá Brenão tudo Bem?');
+    } else if (req.body.Body == 'tudo bem') {
+        twiml.message('Quer saber seus pontos?');
     } else {
         twiml.message(
-            'No Body param match, Twilio sends this in the request to your server.'
-        );
+            'Sua Pontuação é 30.000 pontos')
     }
 
     res.writeHead(200, {'Content-Type': 'text/xml'});

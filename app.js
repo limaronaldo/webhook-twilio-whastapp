@@ -27,14 +27,13 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 app.post('/', (req, res) => {
     const twiml = new MessagingResponse();
-    console.log(req)
-    if (req.body.Body == 'Oi') {
-        twiml.message('Olá Brenão tudo Bem?');
-    } else if (req.body.Body[0] == 'T') {
+    if (req.body.Body[0] == 's' || req.body.Body[0] == 'S' || req.body.Body[0] == 'Q' || req.body.Body[0] == 'q' ) {
+        twiml.message('Sua Pontuação é 30.000 pontos');
+    } else if (req.body.Body[0] == 'T' || req.body.Body[0] == 't' ) {
         twiml.message('Quer saber seus pontos?');
     } else {
         twiml.message(
-            'Sua Pontuação é 30.000 pontos')
+            'E ai Brenão tudo bem?')
     }
 
     res.writeHead(200, {'Content-Type': 'text/xml'});

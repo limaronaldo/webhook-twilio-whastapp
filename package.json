@@ -1,0 +1,16 @@
+{
+  "name": "whatsapp",
+  "version": "1.0.0",
+  "description": "Teste WhatsApp",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ronaldo Lima",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "twilio": "^3.24.0"
+  }
+}

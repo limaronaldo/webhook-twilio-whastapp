@@ -28,9 +28,9 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.post('/', (req, res) => {
     const twiml = new MessagingResponse();
     console.log(req)
-    if (req.body.Body == 'oi') {
+    if (req.body.Body == 'Oi') {
         twiml.message('Olá Brenão tudo Bem?');
-    } else if (req.body.Body == 'tudo bem') {
+    } else if (req.body.Body[0] == 'T') {
         twiml.message('Quer saber seus pontos?');
     } else {
         twiml.message(

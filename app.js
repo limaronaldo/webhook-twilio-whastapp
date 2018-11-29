@@ -7,6 +7,7 @@ const app = express();
 
 app.use(bodyParser.urlencoded({ extended: false }));
 
+
 app.post('/', (req, res) => {
     const twiml = new MessagingResponse();
     if (req.body.Body[0] == 's' || req.body.Body[0] == 'S' || req.body.Body[0] == 'Q' || req.body.Body[0] == 'q' ) {
